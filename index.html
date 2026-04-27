@@ -28,7 +28,7 @@ font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
 background:
 radial-gradient(circle at 20% 20%, rgba(56,189,248,.08), transparent 40%),
 radial-gradient(circle at 80% 80%, rgba(56,189,248,.05), transparent 40%),
-linear-gradient(135deg,#0f172a 0%,#111827 100%);
+linear-gradient(135deg,#dea5d7 0%,#ffffff 100%);
 color:var(--text);
 }
 
@@ -124,6 +124,10 @@ color:#fff;
 transform:translateY(-3px);
 }
 
+.btn{
+    color: rgb(0, 0, 0);
+}
+
 .grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
@@ -132,7 +136,7 @@ margin-bottom:80px;
 }
 
 .card{
-background:rgba(15,23,42,.92);
+background:rgba(255, 255, 255, 0.92);
 padding:26px;
 border-radius:16px;
 border:1px solid rgba(255,255,255,.05);
@@ -175,8 +179,8 @@ margin-top:10px;
 
 .tag{
 padding:8px 12px;
-background:#020617;
-border:1px solid #1e293b;
+background:#fcfcfc;
+border:1px solid #010101;
 border-radius:30px;
 font-size:14px;
 }
@@ -201,6 +205,14 @@ padding:24px;
 border-radius:16px;
 }
 
+.review p{
+    color: rgb(255, 255, 255)
+}
+
+.review strong{
+    color: rgb(176, 168, 165);
+}
+
 .stars{
 color:var(--gold);
 font-size:20px;
@@ -214,7 +226,7 @@ margin-bottom:60px;
 
 footer{
 text-align:center;
-color:#64748b;
+color:#0a0a0a;
 font-size:14px;
 padding-bottom:30px;
 }
@@ -277,6 +289,162 @@ animation:flutuar 3s ease-in-out infinite, brilho 2.5s ease-in-out infinite;
 50%{filter:drop-shadow(0 0 18px rgba(34,211,238,1))}
 }
 
+#contato {
+    background-color: #da11c32e;
+    padding: 40px 0;
+    border-radius: 30px;
+  }
+  
+  #contato form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  #contato form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: rgb(70, 68, 68);
+  }
+  
+  #contato form input,
+  #contato form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #8a8a8a;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  #contato form button {
+    background-color: #149c6f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  #contato form button:hover {
+    background-color: #0e644f;
+  }
+
+  .whatsapp-button {
+    background-color: #25D366;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-left: 39%;
+    padding: 3%;
+    margin-top: -50px;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #128C7E;
+  }
+
+  .container img{
+    text-align: center;
+    width: 150px;
+  }
+
+  .team-member img {
+    border-radius: 90px;
+  }
+
+  /* EFEITO PREMIUM NOS BOTÕES */
+.btn,
+#contato form button,
+.whatsapp-button{
+position:relative;
+overflow:hidden;
+transition:all .35s ease;
+transform:translateY(0);
+box-shadow:0 8px 20px rgba(0,0,0,.18);
+}
+
+/* brilho passando */
+.btn::before,
+#contato form button::before,
+.whatsapp-button::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.45),
+transparent
+);
+transform:skewX(-25deg);
+transition:.7s;
+}
+
+/* hover */
+.btn:hover,
+#contato form button:hover,
+.whatsapp-button:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 14px 28px rgba(0,0,0,.25);
+}
+
+/* anima brilho */
+.btn:hover::before,
+#contato form button:hover::before,
+.whatsapp-button:hover::before{
+left:140%;
+}
+
+/* clique */
+.btn:active,
+#contato form button:active,
+.whatsapp-button:active{
+transform:scale(.96);
+box-shadow:0 4px 10px rgba(0,0,0,.18);
+}
+
+/* pulsar botão principal */
+.primary{
+animation:pulseBtn 2s infinite;
+}
+
+@keyframes pulseBtn{
+0%,100%{
+box-shadow:0 0 0 0 rgba(233,30,99,.45);
+}
+70%{
+box-shadow:0 0 0 18px rgba(233,30,99,0);
+}
+}
+
+  :root{
+--bg:#fff7fb;
+--card:#ffffff;
+--accent:#e91e63;
+--accent2:#ff5c93;
+--text:#1f1f1f;
+--muted:#555555;
+--border:#f3c3d4;
+--gold:#facc15;
+--green:#16a34a;
+}
+
 </style>
 </head>
 
@@ -313,7 +481,7 @@ Atendemos MEI, ME, LTDA, profissionais autônomos e empresas de diversos segment
 </p>
 
 <div class="cta">
-<a class="btn primary" href="https://wa.me/5521999999999">Solicitar Atendimento</a>
+<a class="btn primary" href="https://wa.me/5521964909392">Solicitar Atendimento</a>
 <a class="btn secondary" href="#servicos">Ver Serviços</a>
 </div>
 
@@ -437,10 +605,42 @@ Atendemos MEI, ME, LTDA, profissionais autônomos e empresas de diversos segment
 <p>Fale agora com a Gillane Contabilidade e solicite uma proposta.</p>
 
 <div class="cta" style="justify-content:center;">
-<a class="btn primary" href="https://wa.me/5521999999999">WhatsApp</a>
-<a class="btn secondary" href="mailto:contato@gillanecontabilidade.com.br">Email</a>
+<a class="btn primary" href="https://wa.me/5521964909392">WhatsApp</a>
+<a class="btn secondary" href="mailto:gillanesouza@yahoo.com.br">Email</a>
 </div>
 
+<section id="perfil">
+<div class="container">
+    <h2>Seu contador</h2>
+
+    <div class="team-member">
+        <img src="img/gillane-foto-perfil.png">
+        <h3>Gillane Pinho</h3>
+        <p>CRC RJ-138184/O</p>
+        <p>Whatsapp 21 96490-9392</p>
+        <p>Rio de Janeiro - Brasil</p>
+        </div>
+    </section>
+
+</section>
+
+<section id="contato">
+  <div class="container">
+    <h2>Entre em Contato</h2>
+    <form action="https://formsubmit.co/gillanesouza@yahoo.com.br" method="POST">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+      
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Digite sua mensagem para Gillane Contabilidade" rows="4" required></textarea>
+      
+      <button type="submit">Enviar Mensagem</button>
+      
+    </form>
+  </div>
 </section>
 
 <footer>
